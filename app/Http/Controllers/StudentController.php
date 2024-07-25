@@ -14,10 +14,11 @@ class StudentController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(): JsonResource
+    public function index() : JsonResponse
     {
         $students = Student::all();
-        return StudentResource::collection($students);
+        // return StudentResource::collection($students);
+        return response()->json(StudentResource::collection($students), 200);
     }
 
     /**
@@ -45,7 +46,8 @@ class StudentController extends Controller
             ], 200);
         }
         $student = Student::find($id);
-        return new StudentResource($student);
+        //return new StudentResource($student);
+        return response()->json(new StudentResource($student), 200);
     }
 
     /**
