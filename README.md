@@ -4,6 +4,26 @@ Basic API developed in [Laravel](https://github.com/laravel/framework "Laravel")
 
 > **Note:** This is a simple project. I recently started with Laravel. I know I am still learning and have a long way to go, but I have decided to upload this project to a repository to keep a record of my progress in this new world of Laravel.
 
+## Install
+
+## Clone repository
+
+    git clone https://github.com/HLBrandon/my-first-api.git
+
+## Enter the project folder
+
+    cd my-first-api
+
+## Installing dependencies
+
+    composer install
+
+## Copia el archivo `.env.example` y renómbralo a `.env`
+
+    cp .env.example .env
+
+> **Note:** Open the `.env` file and modify the MySQL information
+
 ### Migrations
 
     php artisan migrate
