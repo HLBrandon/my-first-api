@@ -21,7 +21,7 @@ Basic API developed in [Laravel](https://github.com/laravel/framework "Laravel")
 #### request body
 
 	{
-		"first_name" : "name",
+	    "first_name" : "name",
 		"last_name" : "last name",
 		"email" : "email@example.com",
 		"password" : "pass12345",
@@ -34,19 +34,19 @@ Basic API developed in [Laravel](https://github.com/laravel/framework "Laravel")
 #### Response success
 
 	{
-		  "status": true,
-		  "message": "Created with exit",
-		  "data": {
-				"id": 1,
-				"first_name": "Bert",
-				"last_name": "Bradtke",
-				"email": "bert@example.com",
-				"age": 38,
-				"career": {
-					  "career_id": 3,
-					  "career_name": "Ingenieria en Gestión Empresarial"
-				}
-		  }
+		"status": true,
+		"message": "Created with exit",
+		"data": {
+			"id": 1,
+			"first_name": "Bert",
+			"last_name": "Bradtke",
+			"email": "bert@example.com",
+			"age": 38,
+			"career": {
+			"career_id": 3,
+			"career_name": "Ingenieria en Gestión Empresarial"
+			}
+		}
 	}
 
 ## GET REQUEST
@@ -60,39 +60,39 @@ Basic API developed in [Laravel](https://github.com/laravel/framework "Laravel")
 <p>List all students</p>
 
 	[
-		  {
-				"id": 1,
-				"first_name": "Nichole",
-				"last_name": "Dickinson",
-				"email": "estefania99@bergnaum.net",
-				"age": 25,
-				"career": {
-					  "career_id": 1,
-					  "career_name": "Ingenieria en Sistemas Computacionales"
-				}
-		  },
-		  {
-				"id": 2,
-				"first_name": "Asia",
-				"last_name": "Smith",
-				"email": "fabian36@krajcik.com",
-				"age": 25,
-				"career": {
-					  "career_id": 1,
-					  "career_name": "Ingenieria en Sistemas Computacionales"
-				}
-		  },
-		  {
-				"id": 3,
-				"first_name": "Blake",
-				"last_name": "Cummerata",
-				"email": "upredovic@dare.com",
-				"age": 19,
-				"career": {
-					  "career_id": 3,
-					  "career_name": "Ingenieria en Gestión Empresarial"
-				}
-		  }
+		{
+			"id": 1,
+			"first_name": "Nichole",
+			"last_name": "Dickinson",
+			"email": "estefania99@bergnaum.net",
+			"age": 25,
+			"career": {
+				"career_id": 1,
+				"career_name": "Ingenieria en Sistemas Computacionales"
+			}
+		},
+		{
+			"id": 2,
+			"first_name": "Asia",
+			"last_name": "Smith",
+			"email": "fabian36@krajcik.com",
+			"age": 25,
+			"career": {
+				"career_id": 1,
+				"career_name": "Ingenieria en Sistemas Computacionales"
+			}
+		},
+		{
+			"id": 3,
+			"first_name": "Blake",
+			"last_name": "Cummerata",
+			"email": "upredovic@dare.com",
+			"age": 19,
+			"career": {
+				"career_id": 3,
+				"career_name": "Ingenieria en Gestión Empresarial"
+			}
+		}
 	]
 
 ## GET REQUEST WITH ID
@@ -104,15 +104,15 @@ Basic API developed in [Laravel](https://github.com/laravel/framework "Laravel")
 #### Response
 
 	{
-			"id": 5,
-			"first_name": "Margarete edit",
-			"last_name": "Howell edit",
-			"email": "roy.dietrich@hotmail.edit",
-			"age": 25,
-			"career": {
-			"career_id": 1,
-			"career_name": "Ingenieria en Sistemas Computacionales"
-			}
+        "id": 5,
+        "first_name": "Margarete edit",
+        "last_name": "Howell edit",
+        "email": "roy.dietrich@hotmail.edit",
+        "age": 25,
+        "career": {
+            "career_id": 1,
+            "career_name": "Ingenieria en Sistemas Computacionales"
+        }
 	}
 
 ## PUT REQUEST
@@ -124,11 +124,11 @@ Basic API developed in [Laravel](https://github.com/laravel/framework "Laravel")
 #### request body
 
 	{
-		"first_name" : "name edit",
-		"last_name" : "last name edit",
-		"email" : "email@example.com",
-		"age" : 22,
-		"career_id" : 2
+        "first_name" : "name edit",
+        "last_name" : "last name edit",
+        "email" : "email@example.com",
+        "age" : 22,
+        "career_id" : 2
 	}
 
 > <p>**Note**: With PUT the password is not required</p>
@@ -136,8 +136,8 @@ Basic API developed in [Laravel](https://github.com/laravel/framework "Laravel")
 #### Response success
 
 	{
-		  "status": true,
-		  "message": "Student Updated successfully"
+        "status": true,
+        "message": "Student Updated successfully"
 	}
 
 ## DELETE REQUEST WITH ID
@@ -149,6 +149,6 @@ Basic API developed in [Laravel](https://github.com/laravel/framework "Laravel")
 #### Response
 
 	{
-		  "status": true,
-		  "message": "Student Deleted successfully"
+        "status": true,
+        "message": "Student Deleted successfully"
 	}
