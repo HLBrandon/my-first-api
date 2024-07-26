@@ -2,7 +2,7 @@
 
 Basic API developed in [Laravel](https://github.com/laravel/framework "Laravel"). It works with the HTTP verbs **GET**, **POST**, **PUT**, and **DELETE**.
 
-> <p>**Note:** This is a simple project. I recently started with Laravel. I know I am still learning and have a long way to go, but I have decided to upload this project to a repository to keep a record of my progress in this new world of Laravel.</p>
+> **Note:** This is a simple project. I recently started with Laravel. I know I am still learning and have a long way to go, but I have decided to upload this project to a repository to keep a record of my progress in this new world of Laravel.
 
 ### Migrations
 
@@ -29,7 +29,7 @@ Basic API developed in [Laravel](https://github.com/laravel/framework "Laravel")
         "career_id" : 2
     }
 
-> <p>**Note**: In CareerSeeder, only three careers are created. So the values for the key "career_id"must range from 1 to 3</p>
+> **Note**: In CareerSeeder, only three careers are created. So the values for the key "career_id"must range from 1 to 3
 
 #### Response success
 
