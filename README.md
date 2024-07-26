@@ -152,3 +152,7 @@ Basic API developed in [Laravel](https://github.com/laravel/framework "Laravel")
         "status": true,
         "message": "Student Deleted successfully"
 	}
+
+## RELATED
+
+- [CRUD in Java and API Laravel](https://github.com/HLBrandon/crud-java-api-laravel10 "CRUD in Java and API Laravel")
