@@ -29,7 +29,7 @@ Basic API developed in [Laravel](https://github.com/laravel/framework "Laravel")
         "career_id" : 2
     }
 
-> **Note**: In CareerSeeder, only three careers are created. So the values for the key "career_id"must range from 1 to 3
+> **Note**: In CareerSeeder, only three careers are created. So the values for the key "career_id" must range from 1 to 3
 
 #### Response success
 
@@ -131,7 +131,7 @@ Basic API developed in [Laravel](https://github.com/laravel/framework "Laravel")
         "career_id" : 2
 	}
 
-> <p>**Note**: With PUT the password is not required</p>
+> **Note**: With PUT the password is not required
 
 #### Response success
 
