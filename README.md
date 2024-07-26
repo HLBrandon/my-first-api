@@ -59,41 +59,41 @@ Basic API developed in [Laravel](https://github.com/laravel/framework "Laravel")
 
 <p>List all students</p>
 
-	[
-		{
-			"id": 1,
-			"first_name": "Nichole",
-			"last_name": "Dickinson",
-			"email": "estefania99@bergnaum.net",
-			"age": 25,
-			"career": {
-				"career_id": 1,
-				"career_name": "Ingenieria en Sistemas Computacionales"
-			}
-		},
-		{
-			"id": 2,
-			"first_name": "Asia",
-			"last_name": "Smith",
-			"email": "fabian36@krajcik.com",
-			"age": 25,
-			"career": {
-				"career_id": 1,
-				"career_name": "Ingenieria en Sistemas Computacionales"
-			}
-		},
-		{
-			"id": 3,
-			"first_name": "Blake",
-			"last_name": "Cummerata",
-			"email": "upredovic@dare.com",
-			"age": 19,
-			"career": {
-				"career_id": 3,
-				"career_name": "Ingenieria en Gestión Empresarial"
-			}
-		}
-	]
+    [
+        {
+            "id": 1,
+            "first_name": "Nichole",
+            "last_name": "Dickinson",
+            "email": "estefania99@bergnaum.net",
+            "age": 25,
+            "career": {
+                "career_id": 1,
+                "career_name": "Ingenieria en Sistemas Computacionales"
+            }
+        },
+        {
+            "id": 2,
+            "first_name": "Asia",
+            "last_name": "Smith",
+            "email": "fabian36@krajcik.com",
+            "age": 25,
+            "career": {
+                "career_id": 1,
+                "career_name": "Ingenieria en Sistemas Computacionales"
+            }
+        },
+        {
+            "id": 3,
+            "first_name": "Blake",
+            "last_name": "Cummerata",
+            "email": "upredovic@dare.com",
+            "age": 19,
+            "career": {
+                "career_id": 3,
+                "career_name": "Ingenieria en Gestión Empresarial"
+            }
+        }
+    ]
 
 ## GET REQUEST WITH ID
 
