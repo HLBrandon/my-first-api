@@ -20,34 +20,34 @@ Basic API developed in [Laravel](https://github.com/laravel/framework "Laravel")
 
 #### request body
 
-	{
-	    "first_name" : "name",
-		"last_name" : "last name",
-		"email" : "email@example.com",
-		"password" : "pass12345",
-		"age" : 22,
-		"career_id" : 2
-	}
+    {
+        "first_name" : "name",
+        "last_name" : "last name",
+        "email" : "email@example.com",
+        "password" : "pass12345",
+        "age" : 22,
+        "career_id" : 2
+    }
 
 > <p>**Note**: In CareerSeeder, only three careers are created. So the values for the key "career_id"must range from 1 to 3</p>
 
 #### Response success
 
-	{
-		"status": true,
-		"message": "Created with exit",
-		"data": {
-			"id": 1,
-			"first_name": "Bert",
-			"last_name": "Bradtke",
-			"email": "bert@example.com",
-			"age": 38,
-			"career": {
-			"career_id": 3,
-			"career_name": "Ingenieria en Gestión Empresarial"
-			}
-		}
-	}
+    {
+        "status": true,
+        "message": "Created with exit",
+        "data": {
+            "id": 1,
+            "first_name": "Bert",
+            "last_name": "Bradtke",
+            "email": "bert@example.com",
+            "age": 38,
+            "career": {
+                "career_id": 3,
+                "career_name": "Ingenieria en Gestión Empresarial"
+            }
+        }
+    }
 
 ## GET REQUEST
 
