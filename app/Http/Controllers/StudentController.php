@@ -29,7 +29,7 @@ class StudentController extends Controller
         $student = Student::create($request->all());
         return response()->json([
             "status" => true,
-            "message" => "Created with exit",
+            "message" => "Created successfully",
             "data" => new StudentResource($student)
         ], 201);
     }
@@ -58,7 +58,7 @@ class StudentController extends Controller
         $student->update($request->all());
         return response()->json([
             "status" => true,
-            "message" => "Updated with exit"
+            "message" => "Student Updated successfully"
         ], 200);
     }
 
@@ -70,7 +70,7 @@ class StudentController extends Controller
         $student->delete();
         return response()->json([
             "status" => true,
-            "message" => "Destroyed with exit"
+            "message" => "Student Deleted successfully"
         ], 200);
     }
 }

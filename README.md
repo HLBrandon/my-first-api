@@ -1,66 +1,154 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# First API in Laravel 10
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Basic API developed in [Laravel](https://github.com/laravel/framework "Laravel"). It works with the HTTP verbs **GET**, **POST**, **PUT**, and **DELETE**.
 
-## About Laravel
+> <p>**Note:** This is a simple project. I recently started with Laravel. I know I am still learning and have a long way to go, but I have decided to upload this project to a repository to keep a record of my progress in this new world of Laravel.</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Migrations
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+`php artisan migrate`
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Seeders
 
-## Learning Laravel
+`php artisan db:seed`
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## POST REQUEST
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+#### URL API
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+`http://127.0.0.1:8000/api/student/`
 
-## Laravel Sponsors
+#### request body
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+	{
+		"first_name" : "name",
+		"last_name" : "last name",
+		"email" : "email@example.com",
+		"password" : "pass12345",
+		"age" : 22,
+		"career_id" : 2
+	}
 
-### Premium Partners
+> <p>**Note**: In CareerSeeder, only three careers are created. So the values for the key "career_id"must range from 1 to 3</p>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+#### Response success
 
-## Contributing
+	{
+		  "status": true,
+		  "message": "Created with exit",
+		  "data": {
+				"id": 1,
+				"first_name": "Bert",
+				"last_name": "Bradtke",
+				"email": "bert@example.com",
+				"age": 38,
+				"career": {
+					  "career_id": 3,
+					  "career_name": "Ingenieria en Gestión Empresarial"
+				}
+		  }
+	}
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## GET REQUEST
 
-## Code of Conduct
+#### URL API
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+`http://127.0.0.1:8000/api/student/`
 
-## Security Vulnerabilities
+#### Response
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+<p>List all students</p>
 
-## License
+	[
+		  {
+				"id": 1,
+				"first_name": "Nichole",
+				"last_name": "Dickinson",
+				"email": "estefania99@bergnaum.net",
+				"age": 25,
+				"career": {
+					  "career_id": 1,
+					  "career_name": "Ingenieria en Sistemas Computacionales"
+				}
+		  },
+		  {
+				"id": 2,
+				"first_name": "Asia",
+				"last_name": "Smith",
+				"email": "fabian36@krajcik.com",
+				"age": 25,
+				"career": {
+					  "career_id": 1,
+					  "career_name": "Ingenieria en Sistemas Computacionales"
+				}
+		  },
+		  {
+				"id": 3,
+				"first_name": "Blake",
+				"last_name": "Cummerata",
+				"email": "upredovic@dare.com",
+				"age": 19,
+				"career": {
+					  "career_id": 3,
+					  "career_name": "Ingenieria en Gestión Empresarial"
+				}
+		  }
+	]
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## GET REQUEST WITH ID
+
+#### URL API
+
+`http://127.0.0.1:8000/api/student/5`
+
+#### Response
+
+	{
+			"id": 5,
+			"first_name": "Margarete edit",
+			"last_name": "Howell edit",
+			"email": "roy.dietrich@hotmail.edit",
+			"age": 25,
+			"career": {
+			"career_id": 1,
+			"career_name": "Ingenieria en Sistemas Computacionales"
+			}
+	}
+
+## PUT REQUEST
+
+#### URL API
+
+`http://127.0.0.1:8000/api/student/5`
+
+#### request body
+
+	{
+		"first_name" : "name edit",
+		"last_name" : "last name edit",
+		"email" : "email@example.com",
+		"age" : 22,
+		"career_id" : 2
+	}
+
+> <p>**Note**: With PUT the password is not required</p>
+
+#### Response success
+
+	{
+		  "status": true,
+		  "message": "Student Updated successfully"
+	}
+
+## DELETE REQUEST WITH ID
+
+#### URL API
+
+`http://127.0.0.1:8000/api/student/5`
+
+#### Response
+
+	{
+		  "status": true,
+		  "message": "Student Deleted successfully"
+	}
