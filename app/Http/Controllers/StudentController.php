@@ -43,7 +43,7 @@ class StudentController extends Controller
             return response()->json([
                 "status" => false,
                 "message" => "Student not found"
-            ], 200);
+            ], 404);
         }
         $student = Student::find($id);
         //return new StudentResource($student);
