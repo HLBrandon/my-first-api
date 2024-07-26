@@ -53,7 +53,7 @@ Basic API developed in [Laravel](https://github.com/laravel/framework "Laravel")
 
 #### URL API
 
-`http://127.0.0.1:8000/api/student/`
+    http://127.0.0.1:8000/api/student/
 
 #### Response
 
@@ -99,7 +99,7 @@ Basic API developed in [Laravel](https://github.com/laravel/framework "Laravel")
 
 #### URL API
 
-`http://127.0.0.1:8000/api/student/5`
+    http://127.0.0.1:8000/api/student/5
 
 #### Response
 
@@ -119,7 +119,7 @@ Basic API developed in [Laravel](https://github.com/laravel/framework "Laravel")
 
 #### URL API
 
-`http://127.0.0.1:8000/api/student/5`
+    http://127.0.0.1:8000/api/student/5
 
 #### request body
 
@@ -144,7 +144,7 @@ Basic API developed in [Laravel](https://github.com/laravel/framework "Laravel")
 
 #### URL API
 
-`http://127.0.0.1:8000/api/student/5`
+    http://127.0.0.1:8000/api/student/5
 
 #### Response
 
