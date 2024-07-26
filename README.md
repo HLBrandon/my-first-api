@@ -6,11 +6,11 @@ Basic API developed in [Laravel](https://github.com/laravel/framework "Laravel")
 
 ### Migrations
 
-`php artisan migrate`
+    php artisan migrate
 
 ### Seeders
 
-`php artisan db:seed`
+    php artisan db:seed
 
 ## POST REQUEST
 
