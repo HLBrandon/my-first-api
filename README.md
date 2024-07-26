@@ -6,19 +6,19 @@ Basic API developed in [Laravel](https://github.com/laravel/framework "Laravel")
 
 ## Install
 
-## Clone repository
+### Clone repository
 
     git clone https://github.com/HLBrandon/my-first-api.git
 
-## Enter the project folder
+### Enter the project folder
 
     cd my-first-api
 
-## Installing dependencies
+### Installing dependencies
 
     composer install
 
-## Copia el archivo `.env.example` y renómbralo a `.env`
+### Copia el archivo `.env.example` y renómbralo a `.env`
 
     cp .env.example .env
 
