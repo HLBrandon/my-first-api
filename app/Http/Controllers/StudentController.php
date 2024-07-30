@@ -58,7 +58,8 @@ class StudentController extends Controller
         $student->update($request->all());
         return response()->json([
             "status" => true,
-            "message" => "Student Updated successfully"
+            "message" => "Student Updated successfully",
+            "data" => new StudentResource($student)
         ], 200);
     }
 
