@@ -8,23 +8,13 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Validator;
+use App\Http\Requests\RegisterUserRequest;
 
 class AuthController extends Controller
 {
-    public function registerUser(Request $request): JsonResponse
+    public function registerUser(RegisterUserRequest $request): JsonResponse
     {
-        $validator = Validator::make($request->all(), [
-            'name' => 'required|string|min:3|max:255',
-            'email' => 'required|string|email|unique:users,email|min:5|max:255',
-            'password' => 'required|min:5'
-        ]);
-
-        if ($validator->fails()) {
-            return response()->json($validator->errors());
-        }
-
         $user = User::create($request->all());
-
         return response()->json([
             "status" => true,
             "message" => "User created successfully",
@@ -39,7 +29,7 @@ class AuthController extends Controller
             return response()->json([
                 "status" => false,
                 "message" => "Incorrect email/password"
-            ], 401);
+            ], 401); // error 401 significa no encontrado
         }
 
         $user = User::where('email', $request->email)->firstOrFail();
