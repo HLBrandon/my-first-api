@@ -13,7 +13,6 @@ class AuthController extends Controller
 {
     public function registerUser(Request $request): JsonResponse
     {
-
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|min:3|max:255',
             'email' => 'required|string|email|unique:users,email|min:5|max:255',
@@ -25,14 +24,11 @@ class AuthController extends Controller
         }
 
         $user = User::create($request->all());
-        $token = $user->createToken('auth_token')->plainTextToken;
 
         return response()->json([
             "status" => true,
             "message" => "User created successfully",
-            "data" => $user,
-            "access_token" => $token,
-            "type_token" => "Bearer"
+            "data" => $user
         ], 201);
     }
 
@@ -59,23 +55,20 @@ class AuthController extends Controller
 
     public function logout()
     {
-        // Verifica si hay un usuario autenticado
         if (Auth::check()) {
-            // Elimina todos los tokens del usuario autenticado
-            Auth::user()->tokens()->delete();
-
-            // Respuesta de éxito
+            //the comment below just to ignore intelephense(1013) annoying error.
+            /** @var \App\Models\User $user **/
+            $user = Auth::user();
+            $user->tokens()->delete();
             return response()->json([
                 'status' => true,
                 'message' => 'Logout successful'
             ], 200);
         } else {
-            // Respuesta de error si no hay usuario autenticado
             return response()->json([
                 'status' => false,
                 'message' => 'No authenticated user'
             ], 401);
         }
     }
-    
 }
