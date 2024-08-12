@@ -24,7 +24,7 @@ Route::post('register', [AuthController::class, 'registerUser'])->name('auth.reg
 Route::post('login', [AuthController::class, 'login'])->name('auth.loginUser');
 
 Route::middleware('auth:sanctum')->group(function () {
+    // Si no esta iniciado sesion devuelve el error 401 Unauthenticated
+    Route::resource('/student', StudentController::class);
     Route::get('logout', [AuthController::class, 'logout'])->name('auth.logoutUser');
 });
-
-Route::resource('/student', StudentController::class);
