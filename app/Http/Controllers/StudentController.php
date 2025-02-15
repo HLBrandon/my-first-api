@@ -7,13 +7,10 @@ use App\Http\Requests\StudentUpdateRequest;
 use App\Models\Student;
 use App\Http\Resources\StudentResource;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Resources\Json\JsonResource;
 
 class StudentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index() : JsonResponse
     {
         $students = Student::all();
@@ -21,9 +18,6 @@ class StudentController extends Controller
         return response()->json(StudentResource::collection($students), 200);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(StudentCreateRequest $request): JsonResponse
     {
         $student = Student::create($request->all());
@@ -34,9 +28,6 @@ class StudentController extends Controller
         ], 201);
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show($id)
     {
         if (!Student::where('id', $id)->exists()) {
@@ -50,9 +41,6 @@ class StudentController extends Controller
         return response()->json(new StudentResource($student), 200);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(StudentUpdateRequest $request, Student $student): JsonResponse
     {
         $student->update($request->all());
@@ -63,9 +51,6 @@ class StudentController extends Controller
         ], 200);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Student $student): JsonResponse
     {
         $student->delete();
@@ -74,4 +59,5 @@ class StudentController extends Controller
             "message" => "Student Deleted successfully"
         ], 200);
     }
+
 }
