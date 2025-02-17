@@ -11,7 +11,7 @@ use Illuminate\Http\JsonResponse;
 class StudentController extends Controller
 {
 
-    public function index() : JsonResponse
+    public function index(): JsonResponse
     {
         $students = Student::all();
         // return StudentResource::collection($students);
@@ -59,5 +59,4 @@ class StudentController extends Controller
             "message" => "Student Deleted successfully"
         ], 200);
     }
-
 }

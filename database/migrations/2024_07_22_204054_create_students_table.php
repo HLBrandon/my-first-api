@@ -20,6 +20,8 @@ return new class extends Migration
             $table->integer('age');
             $table->unsignedBigInteger('career_id');
             $table->timestamps();
+
+            $table->foreign("career_id")->references('id')->on('careers')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

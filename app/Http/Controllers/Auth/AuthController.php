@@ -19,7 +19,7 @@ class AuthController extends Controller
             "status" => true,
             "message" => "User created successfully",
             "data" => $user
-        ], 201);
+        ], 201); // el codigo 201 es comun usarlo para registros exitosos
     }
 
     public function login(Request $request)
